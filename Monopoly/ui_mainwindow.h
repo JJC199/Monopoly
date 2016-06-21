@@ -45,13 +45,13 @@ public:
         Board->setMinimumSize(QSize(1366, 780));
         Board->setMaximumSize(QSize(1366, 780));
         Board->setAutoFillBackground(false);
-        Board->setPixmap(QPixmap(QString::fromUtf8("../../../Pictures/Monopoly/Board/Monopoly-Board.png")));
+        Board->setPixmap(QPixmap(QString::fromUtf8("Images/Board/Monopoly-Board.png")));
         PL1 = new QLabel(centralWidget);
         PL1->setObjectName(QStringLiteral("PL1"));
-        PL1->setGeometry(QRect(704, 704, 32, 32));
+        PL1->setGeometry(QRect(44, 44, 32, 32));
         PL1->setMinimumSize(QSize(32, 32));
         PL1->setMaximumSize(QSize(32, 32));
-        PL1->setPixmap(QPixmap(QString::fromUtf8("../../../Pictures/Monopoly/Players/Player1.png")));
+        PL1->setPixmap(QPixmap(QString::fromUtf8("Images/Players/Player1.png")));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(810, 670, 141, 51));

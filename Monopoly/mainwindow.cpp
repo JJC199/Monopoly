@@ -20,7 +20,7 @@ void MainWindow::on_playButton_clicked(){
 
 void MainWindow::on_pushButton_clicked()
 {
-    GM->setDice(4);
+    GM->setDice(1);
     GM->player1->move(GM->getDice());
     //GM->player1->setPosX(614);
     //GM->player1->setPosY(704);

@@ -70,34 +70,34 @@ void Player::move(int spaces){
                 setPosX(614);
                 return move(spaces - 1);
             }else{ //East Lane
-                setPosY(posy + (posy == 60 ? 90 : 30));
+                setPosY(posy + (posy == 614 ? 90 : 60));
                 return move(spaces - 1);
             }
         }
         if(posy == 704){
-            if(posx == 60){ //SouthWest Corner
-                setPosY(624);
+            if(posx == 44){ //SouthWest Corner
+                setPosY(614);
                 return move(spaces - 1);
             }else{ //South Lane
-                setPosX(posx - (posx == 704 ? 90 : 60));
+                setPosX(posx - (posx == 134 ? 90 : 60));
                 return move(spaces - 1);
             }
         }
-        if(posx == 60){
-            if(posy == 60){ //NorthWest Corner
+        if(posx == 44){
+            if(posy == 44){ //NorthWest Corner
                 setPosX(134);
                 return move(spaces - 1);
             }else{ //West Lane
-                setPosY(posy - (posy == 704 ? 90 : 60));
+                setPosY(posy - (posy == 134 ? 90 : 60));
                 return move(spaces - 1);
             }
         }
-        if(posy == 60){
+        if(posy == 44){
             if(posx == 704){ //NorthEast Corner
                 setPosY(134);
                 return move(spaces - 1);
             }else{ //North Lane
-                setPosX(posx + (posx == 60 ? 90 : 60));
+                setPosX(posx + (posx == 614 ? 90 : 60));
                 return move(spaces - 1);
             }
         }

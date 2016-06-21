@@ -60,14 +60,14 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../Pictures/Monopoly/Board/Monopoly-Board.png</pixmap>
+     <pixmap>Images/Board/Monopoly-Board.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="PL1">
     <property name="geometry">
      <rect>
-      <x>704</x>
-      <y>704</y>
+      <x>44</x>
+      <y>44</y>
       <width>32</width>
       <height>32</height>
      </rect>
@@ -88,7 +88,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../Pictures/Monopoly/Players/Player1.png</pixmap>
+     <pixmap>Images/Players/Player1.png</pixmap>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
