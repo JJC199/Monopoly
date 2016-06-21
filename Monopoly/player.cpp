@@ -5,8 +5,8 @@ Player::Player(QString n, int pc)
     name = n;
     playercode = pc;
     wallet = 1500;
-    posx = 720;
-    posy = 720;
+    posx = 704;
+    posy = 704;
     jailed = false;
     turnDisabled = 0;
 }
@@ -39,6 +39,14 @@ int Player::getPosY(){
     return posy;
 }
 
+void Player::setPosX(int x){
+    posx = x;
+}
+
+void Player::setPosY(int y){
+    posy = y;
+}
+
 bool Player::isJailed(){
     return jailed;
 }
@@ -54,41 +62,42 @@ void Player::freeJail(){
 //Board size: 780 x 780
 //Corner boxes: 120 x 120
 //Normal boxes: 60px Width
+//Player icons: 32x32
 void Player::move(int spaces){
     if(spaces > 0 && !isJailed()){
         if(posx == 704){
             if(posy == 704){ //SouthEast Corner
-                posx = 614;
+                setPosX(614);
                 return move(spaces - 1);
             }else{ //East Lane
-                posy += (posy == 60 ? 90 : 30);
+                setPosY(posy + (posy == 60 ? 90 : 30));
                 return move(spaces - 1);
             }
         }
         if(posy == 704){
             if(posx == 60){ //SouthWest Corner
-                posy = 614;
+                setPosY(624);
                 return move(spaces - 1);
             }else{ //South Lane
-                posx -= (posx == 704 ? 90 : 60);
+                setPosX(posx - (posx == 704 ? 90 : 60));
                 return move(spaces - 1);
             }
         }
         if(posx == 60){
             if(posy == 60){ //NorthWest Corner
-                posx = 134;
+                setPosX(134);
                 return move(spaces - 1);
             }else{ //West Lane
-                posy -= (posy == 704 ? 90 : 60);
+                setPosY(posy - (posy == 704 ? 90 : 60));
                 return move(spaces - 1);
             }
         }
         if(posy == 60){
             if(posx == 704){ //NorthEast Corner
-                posy = 134;
+                setPosY(134);
                 return move(spaces - 1);
             }else{ //North Lane
-                posx += (posx == 60 ? 90 : 60);
+                setPosX(posx + (posx == 60 ? 90 : 60));
                 return move(spaces - 1);
             }
         }

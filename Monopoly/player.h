@@ -15,6 +15,8 @@ public:
     void subWallet(double amount);
     int getPosX();
     int getPosY();
+    void setPosX(int x);
+    void setPosY(int y);
     bool isJailed();
     void moveJail();
     void freeJail();
@@ -23,8 +25,8 @@ private:
     QString name;
     int playercode = 0;
     double wallet = 0;
-    int posx = 720;
-    int posy = 720;
+    int posx;
+    int posy;
     bool jailed = false;
     //While turnDisabled is not 0, player can't move (Jailed).
     int turnDisabled = false;
