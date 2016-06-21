@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "property.h"
 #include "player.h"
+#include "gamelogic.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    GameLogic *GM = new GameLogic();
 };
 
 #endif // MAINWINDOW_H

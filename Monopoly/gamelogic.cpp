@@ -32,10 +32,23 @@ void GameLogic::setCurrentPlayer(Player player){
     currentPlayer = &player;
 }
 
+void GameLogic::rollDice(){
+    srand (time(NULL));
+    dice = rand() % 12 + 2;
+}
+
+int GameLogic::getDice(){
+    return dice;
+}
+
+void GameLogic::setDice(int dado){
+    dice = dado;
+}
+
+/*
 //This is the main function of the class, who's purpose is to play the game each turn.
 void GameLogic::play(){
     srand (time(NULL));
-    int dice;
 
     changeTurn();
 
@@ -51,4 +64,6 @@ void GameLogic::play(){
 
     //Since the player tracker is a pointer, we use it to move the player the amount rolled by the dice.
     currentPlayer->move(dice);
+
 }
+*/

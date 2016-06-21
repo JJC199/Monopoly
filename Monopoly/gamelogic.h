@@ -14,13 +14,16 @@ public:
     int changeTurn();
     Player getCurrentPlayer();
     void setCurrentPlayer(Player player);
+    void rollDice();
+    int getDice();
+    void setDice(int dado);
     void play();
-private:
-    int currentTurn = 1;
-    Player *currentPlayer;
-
     Player *player1;
     Player *player2;
+private:
+    int dice;
+    int currentTurn = 1;
+    Player *currentPlayer;
 };
 
 #endif // GAMELOGIC_H

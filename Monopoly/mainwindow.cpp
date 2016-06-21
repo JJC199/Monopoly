@@ -14,7 +14,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_playButton_clicked(){
+
+}
+
 void MainWindow::on_pushButton_clicked()
 {
-    ui->PL1->setGeometry(614, 704, 32, 32);
+    GM->setDice(4);
+    GM->player1->move(GM->getDice());
+    ui->PL1->setGeometry(GM->player1->getPosX(), GM->player1->getPosY(), 32, 32);
 }
